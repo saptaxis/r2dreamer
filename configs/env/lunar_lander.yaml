@@ -1,0 +1,20 @@
+# LunarLander-v3 state-vector (proprioceptive) config
+# 8D obs, 4 discrete actions, no CNN
+task: 'lunarlander_default'
+steps: 5.0e5
+env_num: 16
+eval_episode_num: 10
+action_repeat: 1
+train_ratio: 512
+time_limit: 1000
+
+seed: ${seed}
+device: ${device}
+
+size: [64, 64]
+encoder:
+  mlp_keys: '.*'
+  cnn_keys: '$^'
+decoder:
+  mlp_keys: '.*'
+  cnn_keys: '$^'
