@@ -17,7 +17,7 @@ import gymnasium
 import numpy as np
 
 
-class LunarLander:
+class LunarLander(gymnasium.Env):
     """LunarLander-v3 wrapper for r2dreamer.
 
     Returns observations as a dict with a single 'state' key containing
