@@ -1,3 +1,15 @@
+> **Note — this is a modified branch of a fork.**
+> Upstream is **[NM512/r2dreamer](https://github.com/NM512/r2dreamer)** by Naoki Morihira.
+> The `main` branch of this fork is unmodified upstream; diff against it to see exactly
+> what changed here.
+>
+> This branch adds a Lunar Lander env for training from state vectors
+> (`envs/lunar_lander.py`, `envs/__init__.py`, `configs/env/lunar_lander.yaml`, and a
+> `pin_memory` guard in `envs/parallel.py` for CPU-only runs). It is consumed as a
+> submodule by
+> [saptaxis/world-model-audits](https://github.com/saptaxis/world-model-audits).
+> The model, the implementation and the results are the upstream author's.
+
 # R2-Dreamer: Redundancy-Reduced World Models without Decoders or Augmentation
 
 This repository provides a PyTorch implementation of [R2-Dreamer][r2dreamer] (ICLR 2026), a computationally efficient world model that achieves high performance on continuous control benchmarks. It also includes an efficient PyTorch DreamerV3 reproduction that trains **~5x faster** than a widely used [codebase][dreamerv3-torch], along with other baselines. Selecting R2-Dreamer via the config provides an additional **~1.6x speedup** over this baseline.
